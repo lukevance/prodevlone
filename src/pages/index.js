@@ -1,9 +1,8 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { Link } from "gatsby";
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
 const IndexPage = () => (
   <Layout>
@@ -22,6 +21,6 @@ Orci sagittis eu volutpat odio facilisis mauris sit amet massa. Interdum posuere
 Netus et malesuada fames ac turpis egestas sed. Non consectetur a erat nam at lectus urna. Lorem ipsum dolor sit amet. Ornare arcu dui vivamus arcu felis. Tincidunt nunc pulvinar sapien et ligula. Tincidunt lobortis feugiat vivamus at augue eget. Libero justo laoreet sit amet cursus sit amet. Lorem dolor sed viverra ipsum nunc aliquet. In fermentum posuere urna nec. Nibh mauris cursus mattis molestie a iaculis. Eget velit aliquet sagittis id consectetur purus ut faucibus. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. In cursus turpis massa tincidunt dui ut. In fermentum posuere urna nec tincidunt. Ac auctor augue mauris augue neque gravida in. Convallis convallis tellus id interdum velit laoreet. Pretium viverra suspendisse potenti nullam ac tortor vitae purus faucibus. Quisque id diam vel quam. Ut eu sem integer vitae justo.</p>
     <Link to="/page-2/">Go to page 2</Link>
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;

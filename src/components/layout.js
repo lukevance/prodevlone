@@ -5,18 +5,18 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
+import React from "react";
+import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
-import { Grommet, Box } from 'grommet';
+import { Grommet, Box, Collapsible, Text } from 'grommet';
 
-import Header from "./header"
-import "./layout.css"
+import Header from "./header";
+import "./layout.css";
 
 const theme = {
   global: {
     color: {
-      'light': '#f5f5f5'
+      'light-2': '#f5f5f5'
     },
     font: {
       family: 'Roboto',
@@ -51,8 +51,23 @@ const Layout = ({ children }) => (
           >
             
             <main>
-              <Box pad={{vertical: 'small', horizontal: 'medium'}} elevation='medium' background='light' direction='row'></Box>
-              {children}
+            <Box flex direction="row">
+              
+              <Collapsible direction="horizontal" open={true}>
+                <Box
+                  flex
+                  width="medium"
+                  background="light-2"
+                  pad="small"
+                  elevation="small"
+                >
+                  <Text size="xlarge">Sidebar</Text>
+                </Box>
+              </Collapsible>
+              <Box flex align="center" justify="center">
+                {children}
+              </Box>
+            </Box>
             </main>
             <footer>
               © {new Date().getFullYear()}, Built with

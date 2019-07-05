@@ -9,6 +9,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
 import { Grommet, Box, Collapsible, Text } from 'grommet';
+import { CaretNext } from 'grommet-icons';
 
 import Header from "./header";
 import "./layout.css";
@@ -38,44 +39,40 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
-        <Grommet theme={theme}>
-          <Header siteTitle={data.site.siteMetadata.title} />
-          <Box direction='row' flex overflow={{horizontal: 'hidden'}}>
-
-          {/* <div
+      <Grommet theme={theme}>
+        <Header siteTitle={data.site.siteMetadata.title} />
+        
+        <Box direction='row' flex overflow={{horizontal: 'hidden'}}>
+          <Box direction='row' flex>
+            <Collapsible direction="horizontal" open={true}>
+              <Box
+                flex
+                width="medium"
+                background="light-2"
+                pad="small"
+                elevation="small"
+              >
+                <Text size="xlarge">Sidebar</Text>
+              </Box>
+            </Collapsible>
+            <CaretNext onClick={()=> console.log('clicked the sidebar!')}/>
+            {/* <Button icon={<CaretNext />} onClick={() => this.setState(prevState => ({ showSideBar: !prevState.showSideBar }))}/> */}
+          </Box>
+          <Box 
+            flex 
+            align="center" 
+            justify="center" 
             style={{
               margin: `0 auto`,
               maxWidth: 960,
               padding: `0px 1.0875rem 1.45rem`,
               paddingTop: 0,
             }}
-          > */}
-            <Collapsible direction="horizontal" open={true}>
-                <Box
-                  flex
-                  width="medium"
-                  background="light-2"
-                  pad="small"
-                  elevation="small"
-                >
-                  <Text size="xlarge">Sidebar</Text>
-                </Box>
-              </Collapsible>
-            {/* <main> */}
-              <Box flex align="center" justify="center">
-                {children}
-              </Box>
-            {/* </main> */}
-            <footer>
-              © {new Date().getFullYear()}, Built with
-              {` `}
-              <a href="https://www.gatsbyjs.org">Gatsby</a>
-            </footer>
-          {/* </div> */}
+          >
+            {children}
           </Box>
-        </Grommet>
-      </>
+        </Box>
+      </Grommet>
     )}
   />
 )

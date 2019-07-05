@@ -41,19 +41,17 @@ const Layout = ({ children }) => (
       <>
         <Grommet theme={theme}>
           <Header siteTitle={data.site.siteMetadata.title} />
-          <div
+          <Box direction='row' flex overflow={{horizontal: 'hidden'}}>
+
+          {/* <div
             style={{
               margin: `0 auto`,
               maxWidth: 960,
               padding: `0px 1.0875rem 1.45rem`,
               paddingTop: 0,
             }}
-          >
-            
-            <main>
-            <Box flex direction="row">
-              
-              <Collapsible direction="horizontal" open={true}>
+          > */}
+            <Collapsible direction="horizontal" open={true}>
                 <Box
                   flex
                   width="medium"
@@ -64,17 +62,18 @@ const Layout = ({ children }) => (
                   <Text size="xlarge">Sidebar</Text>
                 </Box>
               </Collapsible>
+            {/* <main> */}
               <Box flex align="center" justify="center">
                 {children}
               </Box>
-            </Box>
-            </main>
+            {/* </main> */}
             <footer>
               © {new Date().getFullYear()}, Built with
               {` `}
               <a href="https://www.gatsbyjs.org">Gatsby</a>
             </footer>
-          </div>
+          {/* </div> */}
+          </Box>
         </Grommet>
       </>
     )}

@@ -1,7 +1,7 @@
 {
   "name": "pro-dev-olone",
   "private": true,
-  "description": "An experiemental center for Luke Vance to put things on the interwebs",
+  "description": "An experimental center for Luke Vance to put things on the interwebs",
   "version": "0.1.0",
   "author": "Luke Vance <lukevance90@gmail.com>",
   "dependencies": {

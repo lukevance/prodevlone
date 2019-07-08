@@ -9,9 +9,9 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
 import { Grommet, Box, Collapsible, Text, Layer } from 'grommet';
-import { CaretNext, CaretPrevious } from 'grommet-icons';
 
 import Header from "./header";
+import Sidebar from "./sidebar";
 import "./layout.css";
 
 const theme = {
@@ -52,23 +52,7 @@ class Layout extends Component {
             <Header siteTitle={data.site.siteMetadata.title} />
             
             <Box direction='row' flex overflow={{horizontal: 'hidden'}}>
-              <Box direction='row'>
-                <Collapsible direction="horizontal" open={showSideBar}>
-                  <Box
-                    flex
-                    width="medium"
-                    background="light-2"
-                    pad="small"
-                    elevation="small"
-                  >
-                    <Text size="xlarge">Sidebar</Text>
-                  </Box>
-                </Collapsible>
-                {showSideBar 
-                ? <CaretPrevious onClick={() => this.setState(prevState => ({ showSideBar: !prevState.showSideBar }))}/>
-                : <CaretNext onClick={() => this.setState(prevState => ({ showSideBar: !prevState.showSideBar }))}/>
-                }
-              </Box>
+              <Sidebar />
               <Box 
                 flex 
                 align="center" 

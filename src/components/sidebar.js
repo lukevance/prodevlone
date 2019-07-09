@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Box, Collapsible, Text } from 'grommet';
+import { Box, Collapsible, Text, Image } from 'grommet';
 import { CaretNext, CaretPrevious } from 'grommet-icons';
 
+import headshot from "../images/headshot.jpg";
 
 class Sidebar extends Component {
     render(){
@@ -10,13 +11,19 @@ class Sidebar extends Component {
             <Box direction='row'>
                 <Collapsible direction="horizontal" open={showSideBar}>
                     <Box
-                    flex
-                    width="medium"
-                    background="light-2"
-                    pad="small"
-                    elevation="small"
+                        flex
+                        width="medium"
+                        background="light-2"
+                        pad="small"
+                        elevation="small"
                     >
-                    <Text size="xlarge">Sidebar</Text>
+                        <Box height="medium" width="medium">
+                            <Image
+                                fit="cover"
+                                src={headshot}
+                            />
+                        </Box>
+                        <Text size="large">Hi, I'm Luke</Text>
                     </Box>
                 </Collapsible>
                 <Box

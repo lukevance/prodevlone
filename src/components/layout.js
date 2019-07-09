@@ -27,7 +27,6 @@ const theme = {
   },
 };
 
-// const Layout = ({ children }) => (
 class Layout extends Component {
   state = {
     showSideBar: false,
@@ -61,12 +60,12 @@ class Layout extends Component {
               <Box 
                 flex 
                 align="center" 
-                justify="center" 
+                justify="center"
                 style={{
                   margin: `0 auto`,
                   maxWidth: 960,
                   padding: `0px 1.0875rem 1.45rem`,
-                  paddingTop: 0,
+                  paddingTop: `1rem`,
                 }}
               >
                 {children}

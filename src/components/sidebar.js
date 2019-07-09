@@ -19,10 +19,15 @@ class Sidebar extends Component {
                     <Text size="xlarge">Sidebar</Text>
                     </Box>
                 </Collapsible>
-                {showSideBar 
-                ? <CaretPrevious size='large' onClick={() => toggleSidebar()}/>
-                : <CaretNext size='large' onClick={() => toggleSidebar()}/>
-                }
+                <Box
+                    margin={{top: "medium"}} 
+                    onClick={() => toggleSidebar()}
+                >
+                    {showSideBar 
+                    ? <CaretPrevious size='large'/>
+                    : <CaretNext size='large'/>
+                    }
+                </Box>
             </Box>
         );      
     }

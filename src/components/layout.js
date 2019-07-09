@@ -8,7 +8,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
-import { Grommet, Box, Collapsible, Text, Layer } from 'grommet';
+import { Grommet, Box } from 'grommet';
 
 import Header from "./header";
 import Sidebar from "./sidebar";
@@ -33,6 +33,8 @@ class Layout extends Component {
     showSideBar: false,
   };
 
+  toggleSidebar = () => this.setState(prevState => ({ showSideBar: !prevState.showSideBar}));
+
   render() {
     const {showSideBar} = this.state;
     const {children} = this.props;
@@ -52,7 +54,10 @@ class Layout extends Component {
             <Header siteTitle={data.site.siteMetadata.title} />
             
             <Box direction='row' flex overflow={{horizontal: 'hidden'}}>
-              <Sidebar />
+              <Sidebar 
+                showSideBar={showSideBar}
+                toggleSidebar={this.toggleSidebar}
+                />
               <Box 
                 flex 
                 align="center" 

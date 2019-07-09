@@ -5,6 +5,7 @@ import { CaretNext, CaretPrevious } from 'grommet-icons';
 
 class Sidebar extends Component {
     render(){
+        const { showSideBar, toggleSidebar } = this.props;
         return (
             <Box direction='row'>
                 <Collapsible direction="horizontal" open={showSideBar}>
@@ -19,8 +20,8 @@ class Sidebar extends Component {
                     </Box>
                 </Collapsible>
                 {showSideBar 
-                ? <CaretPrevious size='large' onClick={() => this.setState(prevState => ({ showSideBar: !prevState.showSideBar }))}/>
-                : <CaretNext size='large' onClick={() => this.setState(prevState => ({ showSideBar: !prevState.showSideBar }))}/>
+                ? <CaretPrevious size='large' onClick={() => toggleSidebar()}/>
+                : <CaretNext size='large' onClick={() => toggleSidebar()}/>
                 }
             </Box>
         );      

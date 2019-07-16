@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
-import { Box, Collapsible, Text, Image } from 'grommet';
-import { CaretNext, CaretPrevious } from 'grommet-icons';
+import { 
+    Box,
+    Button, 
+    Collapsible,
+    Image, 
+    Text 
+} from 'grommet';
+import { CaretNext, CaretPrevious, Github, Linkedin, Mail } from 'grommet-icons';
 
 import headshot from "../images/headshot.jpg";
 
@@ -23,7 +29,15 @@ class Sidebar extends Component {
                                 src={headshot}
                             />
                         </Box>
-                        <Text size="large">Hi, I'm Luke</Text>
+                        <Text size="large">Hi, I'm Luke.</Text>
+                        <Text size="small">
+                        I am a failed hardware founder turned software developer turned product person.
+                        </Text>
+                        <Box direction='row'>
+                            <Button icon={<Github />}/>
+                            <Button icon={<Linkedin />}/>
+                            <Button icon={<Mail />}/>
+                        </Box>
                     </Box>
                 </Collapsible>
                 <Box

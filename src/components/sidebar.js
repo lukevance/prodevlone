@@ -4,9 +4,16 @@ import {
     Button, 
     Collapsible,
     Image, 
-    Text 
+    Text,
 } from 'grommet';
-import { CaretNext, CaretPrevious, Github, Linkedin, Mail } from 'grommet-icons';
+import { 
+    CaretNext, 
+    CaretPrevious, 
+    Github, 
+    Linkedin, 
+    Mail,
+    Medium,
+ } from 'grommet-icons';
 
 import headshot from "../images/headshot.jpg";
 
@@ -17,7 +24,11 @@ const socialLinks = [
     },
     {
         icon: (<Linkedin size='large'/>),
-        link: `https://linkedin.com/in/lukevance/`
+        link: `https://linkedin.com/in/lukevance`
+    },
+    {
+        icon: (<Medium size='large'/>),
+        link: `https://medium.com/@lukevance`
     },
     {
         icon: (<Mail size='large'/>),
@@ -29,7 +40,10 @@ class Sidebar extends Component {
     render(){
         const { showSideBar, toggleSidebar } = this.props;
         return (
-            <Box direction='row'>
+            <Box 
+                direction='row'
+                style={{minHeight: '700px'}}
+            >
                 <Collapsible direction="horizontal" open={showSideBar}>
                     <Box
                         flex
@@ -38,7 +52,7 @@ class Sidebar extends Component {
                         pad="small"
                         elevation="small"
                     >
-                        <Box height="medium" width="medium">
+                        <Box height="small" width="small">
                             <Image
                                 fit="cover"
                                 src={headshot}

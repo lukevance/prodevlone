@@ -60,7 +60,7 @@ class Layout extends Component {
               <Box 
                 flex 
                 align="center" 
-                justify="center"
+                justify="start"
                 style={{
                   margin: `0 auto`,
                   maxWidth: 960,

@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import { Box, Heading } from "grommet";
 
 const Header = ({ siteTitle }) => (
   <header
@@ -8,14 +9,17 @@ const Header = ({ siteTitle }) => (
       background: `rebeccapurple`,
     }}
   >
-    <div
+    <Box
+      direction="row"
+      fill
+      flex
       style={{
         margin: `0 auto`,
         maxWidth: 960,
         padding: `0.75rem 1.0875rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <Heading margin='none'>
         <Link
           to="/"
           style={{
@@ -23,10 +27,10 @@ const Header = ({ siteTitle }) => (
             textDecoration: `none`,
           }}
         >
-          {siteTitle}
+            {siteTitle}
         </Link>
-      </h1>
-    </div>
+      </Heading>
+    </Box>
   </header>
 )
 

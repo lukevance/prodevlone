@@ -2,7 +2,25 @@ module.exports = {
   siteMetadata: {
     title: `Luke Vance`,
     description: `Welcome to my personal site, an archive of case studies and creations, and several failures.`,
-    author: `@gatsbyjs`,
+    author: `@lukevance`,
+    contentLinks: [
+      {
+        name: `LinkedIn`,
+        link: `https://linkedin.com/in/lukevance`
+      },
+      {
+        name: `Github`,
+        link: `https://github.com/lukevance`
+      },
+      {
+        name: `Medium`,
+        link: `https://medium.com/@lukevance`
+      },
+      {
+        name: `Mail`,
+        link: `mailto:lukealanv@gmail.com`
+      }
+    ]
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

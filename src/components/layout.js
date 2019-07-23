@@ -8,7 +8,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
-import { Grommet, Box } from 'grommet';
+import { Grommet, Box, ResponsiveContext } from 'grommet';
 
 import Header from "./header";
 import Sidebar from "./sidebar";
@@ -50,27 +50,33 @@ class Layout extends Component {
         `}
         render={data => (
           <Grommet theme={theme}>
-            <Header siteTitle={data.site.siteMetadata.title} />
-            
-            <Box direction='row' flex overflow={{horizontal: 'hidden'}}>
-              <Sidebar 
-                showSideBar={showSideBar}
-                toggleSidebar={this.toggleSidebar}
-                />
-              <Box 
-                flex 
-                align="center" 
-                justify="start"
-                style={{
-                  margin: `0 auto`,
-                  maxWidth: 960,
-                  padding: `0px 1.0875rem 1.45rem`,
-                  paddingTop: `1rem`,
-                }}
-              >
-                {children}
-              </Box>
-            </Box>
+            <ResponsiveContext.Consumer>
+              {size => (
+                <div>
+                  <Header siteTitle={data.site.siteMetadata.title} />
+                  <Box direction='row' flex overflow={{horizontal: 'hidden'}}>
+                    <Sidebar
+                      size={size} 
+                      showSideBar={showSideBar}
+                      toggleSidebar={this.toggleSidebar}
+                      />
+                    <Box 
+                      flex 
+                      align="center" 
+                      justify="start"
+                      style={{
+                        margin: `0 auto`,
+                        maxWidth: 960,
+                        padding: `0px 1.0875rem 1.45rem`,
+                        paddingTop: `1rem`,
+                      }}
+                    >
+                      {children}
+                    </Box>
+                  </Box>
+                </div>
+              )}
+            </ResponsiveContext.Consumer>
           </Grommet>
         )}
       />

@@ -1,28 +1,28 @@
 import React, { Component } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import { 
+import {
     Box,
-    Button, 
+    Button,
     Collapsible,
-    Image, 
+    Image,
     Text,
 } from 'grommet';
-import { 
-    CaretNext, 
-    CaretPrevious, 
-    Github, 
-    Linkedin, 
+import {
+    CaretNext,
+    CaretPrevious,
+    Github,
+    Linkedin,
     Mail,
     Medium,
- } from 'grommet-icons';
+} from 'grommet-icons';
 
 import headshot from "../images/headshot.jpg";
 
-const socialIcons = [{name: `Github`, icon: <Github size="large"/>}, {name: `LinkedIn`, icon: <Linkedin size="large"/>}, {name: `Mail`, icon: <Mail size="large"/>}, {name: `Medium`, icon: <Medium size="large"/>}];
+const socialIcons = [{ name: `Github`, icon: <Github size="large" /> }, { name: `LinkedIn`, icon: <Linkedin size="large" /> }, { name: `Mail`, icon: <Mail size="large" /> }, { name: `Medium`, icon: <Medium size="large" /> }];
 
 class Sidebar extends Component {
-    render(){
-        const { showSideBar, toggleSidebar } = this.props;
+    render() {
+        const { showSideBar, size, toggleSidebar } = this.props;
         return (
             <StaticQuery
                 query={graphql`
@@ -38,14 +38,14 @@ class Sidebar extends Component {
                     }
                 `}
                 render={data => (
-                    <Box 
+                    <Box
                         direction='row'
-                        style={{minHeight: '700px'}}
+                        style={{ minHeight: '700px' }}
                     >
                         <Collapsible direction="horizontal" open={showSideBar}>
                             <Box
                                 flex
-                                width="medium"
+                                width={(size !== "small" ? "medium" : "small")}
                                 background="light-2"
                                 pad="small"
                                 elevation="small"
@@ -60,24 +60,24 @@ class Sidebar extends Component {
                                 <Text size="small">
                                     I am a failed hardware founder turned software developer turned product person.
                                 </Text>
-                                <Box direction='row' margin={{top: 'medium'}}>
-                                    {data.site.siteMetadata.contentLinks.map(social => <Button icon={socialIcons.find(icn => social.name === icn.name).icon} onClick={() => window.open(social.link, '_blank')}/>)}
+                                <Box direction='row' margin={{ top: 'medium' }} wrap='true'>
+                                    {data.site.siteMetadata.contentLinks.map(social => <Button icon={socialIcons.find(icn => social.name === icn.name).icon} onClick={() => window.open(social.link, '_blank')} />)}
                                 </Box>
                             </Box>
                         </Collapsible>
                         <Box
-                            margin={{top: "medium"}} 
+                            margin={{ top: "medium" }}
                             onClick={() => toggleSidebar()}
                         >
-                            {showSideBar 
-                            ? <CaretPrevious size='large'/>
-                            : <CaretNext size='large'/>
+                            {showSideBar
+                                ? <CaretPrevious size='large' />
+                                : <CaretNext size='large' />
                             }
                         </Box>
                     </Box>
                 )}
-            />     
-        );      
+            />
+        );
     }
 }
 

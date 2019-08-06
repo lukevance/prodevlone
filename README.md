@@ -1,3 +1,5 @@
-This project is built with gatsby.js, and there's not much else here yet.
+# A site about Luke
 
-More info coming!
+Just some info about me, no biggie.
+
+This project is built with gatsby.js.

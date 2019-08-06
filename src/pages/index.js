@@ -11,8 +11,10 @@ const IndexPage = () => (
     <Heading>Welcome</Heading>
     <Text size='large'>I am a failed founder, after-hours developer and day-time product manager. 
       In my free time I like to run, garden and watch sci-fi movies.</Text>
+
+      
     
-    <Link to="/page-2/">Go to page 2</Link>
+    {/* <Link to="/page-2/">Go to page 2</Link> */}
   </Layout>
 );
 

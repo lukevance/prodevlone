@@ -8,7 +8,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
-import { Grommet, Box, ResponsiveContext } from 'grommet';
+import { Grommet, Box, ResponsiveContext, Tabs, Tab } from 'grommet';
 
 import Header from "./header";
 import Sidebar from "./sidebar";
@@ -71,6 +71,16 @@ class Layout extends Component {
                         paddingTop: `1rem`,
                       }}
                     >
+                      <Box direction='row'>
+                        <Tabs>
+                        <Tab title="tab 1">
+                          <Box pad="medium">One</Box>
+                        </Tab>
+                        <Tab title="tab 2">
+                          <Box pad="medium">Two</Box>
+                        </Tab>
+                      </Tabs>
+                      </Box>
                       {children}
                     </Box>
                   </Box>

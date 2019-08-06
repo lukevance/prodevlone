@@ -1,7 +1,8 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import { Box, Heading } from "grommet";
+import { Box, Heading, Menu } from "grommet";
+import { Menu as MenuIcon } from "grommet-icons";
 
 const Header = ({ siteTitle }) => (
   <header
@@ -11,6 +12,7 @@ const Header = ({ siteTitle }) => (
   >
     <Box
       direction="row"
+      justify='between'
       fill
       flex
       style={{
@@ -29,7 +31,17 @@ const Header = ({ siteTitle }) => (
         >
             {siteTitle}
         </Link>
+        {/* <Box align='end' direction='row'>
+          
+        </Box> */}
       </Heading>
+      <Menu
+        label={<MenuIcon color="gray" size="large"/>}
+        items={[
+          { label: 'First Action', onClick: () => {} },
+          { label: 'Second Action', onClick: () => {} },
+        ]}
+      />
     </Box>
   </header>
 )

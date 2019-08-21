@@ -31,12 +31,11 @@ const Header = ({ siteTitle }) => (
         >
             {siteTitle}
         </Link>
-        {/* <Box align='end' direction='row'>
-          
-        </Box> */}
       </Heading>
       <Menu
-        label={<MenuIcon color="gray" size="large"/>}
+        disabled //TODO: add links and remove
+        label={<MenuIcon color="gray" size="medium"/>}
+        dropAlign={{right: 'right', top: 'bottom'}}
         items={[
           { label: 'First Action', onClick: () => {} },
           { label: 'Second Action', onClick: () => {} },

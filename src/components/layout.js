@@ -54,7 +54,7 @@ class Layout extends Component {
               {size => (
                 <div>
                   <Header siteTitle={data.site.siteMetadata.title} />
-                  <Box direction='row' flex overflow={{horizontal: 'hidden'}}>
+                  <Box direction='row' flex overflow={{horizontal: 'hidden'}} background={{color: 'gray'}}>
                     <Sidebar
                       size={size} 
                       showSideBar={showSideBar}
@@ -71,16 +71,6 @@ class Layout extends Component {
                         paddingTop: `1rem`,
                       }}
                     >
-                      <Box direction='row'>
-                        <Tabs>
-                        <Tab title="tab 1">
-                          <Box pad="medium">One</Box>
-                        </Tab>
-                        <Tab title="tab 2">
-                          <Box pad="medium">Two</Box>
-                        </Tab>
-                      </Tabs>
-                      </Box>
                       {children}
                     </Box>
                   </Box>

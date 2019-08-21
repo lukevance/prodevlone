@@ -4,14 +4,26 @@ import { Box, Heading, Text, Image } from "grommet";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import salkantay from "../images/luke-salkantay.jpg";
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <Box fill="horizontal" align='center' pad={{vertical: 'xlarge'}} height='medium'>
-      <Heading>Welcome</Heading>
+    <Box 
+      fill="horizontal" 
+      align='center' 
+      pad={{top: 'xlarge'}} 
+      height='medium'
+    >
+      <Heading>Hi, I'm Luke</Heading>
       <Text size='large'>I am a failed founder, after-hours developer and day-time product manager. 
         In my free time I like to run, garden and watch sci-fi movies.</Text>
+    </Box>
+    <Box height="medium" width="large">
+      <Image
+          fit="cover"
+          src={salkantay}
+      />
     </Box>
     
     {/* <Link to="/page-2/">Go to page 2</Link> */}

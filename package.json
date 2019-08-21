@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Luke Vance <lukevance90@gmail.com>",
   "dependencies": {
+    "a11y-react-emoji": "^1.0.2",
     "gatsby": "^2.5.5",
     "gatsby-image": "^2.1.0",
     "gatsby-plugin-manifest": "^2.1.1",

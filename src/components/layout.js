@@ -8,7 +8,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
-import { Grommet, Box, ResponsiveContext, Tabs, Tab } from 'grommet';
+import { Grommet, Box, ResponsiveContext } from 'grommet';
 
 import Header from "./header";
 import Sidebar from "./sidebar";
@@ -17,7 +17,8 @@ import "./layout.css";
 const theme = {
   global: {
     color: {
-      'light-2': '#f5f5f5'
+      'light-2': '#f5f5f5',
+      'light-purple': '#A079C8'
     },
     font: {
       family: 'Roboto',
@@ -54,7 +55,7 @@ class Layout extends Component {
               {size => (
                 <div>
                   <Header siteTitle={data.site.siteMetadata.title} />
-                  <Box direction='row' flex overflow={{horizontal: 'hidden'}} background={{color: 'gray'}}>
+                  <Box direction='row' flex overflow={{horizontal: 'hidden'}} background={{color: 'light-purple'}}>
                     <Sidebar
                       size={size} 
                       showSideBar={showSideBar}

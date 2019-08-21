@@ -15,6 +15,7 @@ import {
     Mail,
     Medium,
 } from 'grommet-icons';
+import Emoji from 'a11y-react-emoji';
 
 import headshot from "../images/headshot.jpg";
 
@@ -56,10 +57,8 @@ class Sidebar extends Component {
                                         src={headshot}
                                     />
                                 </Box>
-                                <Text size="large">Hi, I'm Luke.</Text>
-                                <Text size="small">
-                                    I am a failed hardware founder turned software developer turned product person.
-                                </Text>
+                                <Text size="large">That's me <Emoji symbol="☝️"/></Text>
+                                <Text size="large" margin={{top: 'medium'}}>Find more stuff about me <Emoji symbol="👇"/></Text>
                                 <Box direction='row' margin={{ top: 'medium' }} wrap='true'>
                                     {data.site.siteMetadata.contentLinks.map(social => <Button icon={socialIcons.find(icn => social.name === icn.name).icon} onClick={() => window.open(social.link, '_blank')} />)}
                                 </Box>

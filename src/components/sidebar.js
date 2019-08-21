@@ -41,7 +41,7 @@ class Sidebar extends Component {
                 render={data => (
                     <Box
                         direction='row'
-                        style={{ minHeight: '700px' }}
+                        style={{ minHeight: '600px' }}
                     >
                         <Collapsible direction="horizontal" open={showSideBar}>
                             <Box

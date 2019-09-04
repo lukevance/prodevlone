@@ -55,7 +55,7 @@ class Layout extends Component {
                   plain={true}
                   focusIndicator={false}
                   alignSelf="start"
-                  label={showSideBar
+                  icon={showSideBar
                       ? <CaretPrevious size='large' />
                       : <CaretNext size='large' />
                   }

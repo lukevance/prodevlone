@@ -8,7 +8,12 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
-import { Box } from 'grommet';
+import { Box, Button } from 'grommet';
+import {
+  CaretNext,
+  CaretPrevious
+} from 'grommet-icons';
+
 
 import Header from "./header";
 import Sidebar from "./sidebar";
@@ -42,8 +47,19 @@ class Layout extends Component {
               <Sidebar
                 size={size} 
                 showSideBar={showSideBar}
-                toggleSidebar={this.toggleSidebar}
+                // toggleSidebar={this.toggleSidebar}
                 />
+                <Button
+                  margin={{ top: "medium" }}
+                  onClick={() => this.toggleSidebar()}
+                  plain={true}
+                  focusIndicator={false}
+                  alignSelf="start"
+                  label={showSideBar
+                      ? <CaretPrevious size='large' />
+                      : <CaretNext size='large' />
+                  }
+              />
               <Box 
                 flex 
                 align="center" 
@@ -55,6 +71,7 @@ class Layout extends Component {
                   paddingTop: `1rem`,
                 }}
               >
+                
                 {children}
               </Box>
             </Box>

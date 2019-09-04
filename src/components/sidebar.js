@@ -8,8 +8,8 @@ import {
     Text,
 } from 'grommet';
 import {
-    CaretNext,
-    CaretPrevious,
+    // CaretNext,
+    // CaretPrevious,
     Github,
     Linkedin,
     Mail,
@@ -23,7 +23,7 @@ const socialIcons = [{ name: `Github`, icon: <Github size="large" /> }, { name: 
 
 class Sidebar extends Component {
     render() {
-        const { showSideBar, size, toggleSidebar } = this.props;
+        const { showSideBar, size } = this.props;
         return (
             <StaticQuery
                 query={graphql`
@@ -64,15 +64,17 @@ class Sidebar extends Component {
                                 </Box>
                             </Box>
                         </Collapsible>
-                        <Box
+                        {/* <Button
                             margin={{ top: "medium" }}
                             onClick={() => toggleSidebar()}
-                        >
-                            {showSideBar
+                            plain={true}
+                            focusIndicator={false}
+                            alignSelf="start"
+                            label={showSideBar
                                 ? <CaretPrevious size='large' />
                                 : <CaretNext size='large' />
                             }
-                        </Box>
+                        /> */}
                     </Box>
                 )}
             />

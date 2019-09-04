@@ -48,7 +48,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-s3`,
       options: {
-          bucketName: 'prodevlone-personal-site'
+          bucketName: 'prodevlone-personal-site',
+          protocol: "https",
+          hostname: "www.provolove.com",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

@@ -38,7 +38,7 @@ const Header = ({ siteTitle }) => (
         dropAlign={{right: 'right', top: 'bottom'}}
         size="large"
         items={[
-          { label: 'Projects', href: "/page-2" },
+          { label: 'Projects', href: "/my-work" },
           { label: 'Contact', onClick: () => {} },
           { label: 'Resume', onClick: () => {} },
         ]}

@@ -18,7 +18,7 @@ const BioSection = props => {
                 primary 
                 onClick={() => setOpen(!open)} 
                 label="Read the Long Version" 
-                fill={false}
+                margin={{horizontal: "xlarge"}}
             />
             <Collapsible open={open} {...props}>
                 <Box

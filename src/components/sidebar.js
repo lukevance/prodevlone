@@ -64,17 +64,6 @@ class Sidebar extends Component {
                                 </Box>
                             </Box>
                         </Collapsible>
-                        {/* <Button
-                            margin={{ top: "medium" }}
-                            onClick={() => toggleSidebar()}
-                            plain={true}
-                            focusIndicator={false}
-                            alignSelf="start"
-                            label={showSideBar
-                                ? <CaretPrevious size='large' />
-                                : <CaretNext size='large' />
-                            }
-                        /> */}
                     </Box>
                 )}
             />

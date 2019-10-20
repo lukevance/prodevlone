@@ -18,7 +18,7 @@ const Header = ({ siteTitle }) => (
       style={{
         margin: `0 auto`,
         maxWidth: 960,
-        padding: `0.75rem 1.0875rem`,
+        padding: `0.75rem 1.0875rem 0 1.0875rem`,
       }}
     >
       <Heading margin='none'>
@@ -33,12 +33,14 @@ const Header = ({ siteTitle }) => (
         </Link>
       </Heading>
       <Menu
-        disabled //TODO: add links and remove
-        label={<MenuIcon color="gray" size="medium"/>}
+        // disabled //TODO: add links and remove
+        label={<MenuIcon color="white" size="large"/>}
         dropAlign={{right: 'right', top: 'bottom'}}
+        size="large"
         items={[
-          { label: 'First Action', onClick: () => {} },
-          { label: 'Second Action', onClick: () => {} },
+          { label: 'Projects', href: "/page-2" },
+          { label: 'Contact', onClick: () => {} },
+          { label: 'Resume', onClick: () => {} },
         ]}
       />
     </Box>

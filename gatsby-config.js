@@ -30,6 +30,10 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+      options: {
+        name: `markdown`,
+        path: `${__dirname}/src/markdown`,
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

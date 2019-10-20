@@ -1,5 +1,4 @@
 import React from "react";
-// import { Link } from "gatsby";
 import { 
   Box, 
   Grommet,
@@ -11,6 +10,7 @@ import {
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import BioSection from "../components/bio-section";
 import salkantay from "../images/luke-salkantay.jpg";
 
 const theme = {
@@ -25,34 +25,40 @@ const theme = {
       height: '20px',
     },
   },
+  main: {
+    align: 'left'
+  }
 };
 
-const IndexPage = () => (
-  <Grommet theme={theme}>
-    <ResponsiveContext.Consumer>
-      {size => (
-        <Layout size={size}>
-        <SEO title="Home" />
-        <Box
-          fill="horizontal"
-          align='center'
-          pad={{ top: 'xlarge' }}
-          height='medium'
-        >
-          <Heading>Hi, I'm Luke</Heading>
-          <Text size='large'>I am a failed founder, after-hours developer and day-time product manager.
-        In my free time I like to run, garden and watch sci-fi movies.</Text>
-        </Box>
-        <Box height="medium" width="large">
-          <Image
-            fit="cover"
-            src={salkantay}
-          />
-        </Box>
-      </Layout>
-      )}
-    </ResponsiveContext.Consumer>
-  </Grommet>
-);
+const IndexPage = () => {
+  return (
+    <Grommet theme={theme}>
+      <ResponsiveContext.Consumer>
+        {size => (
+          <Layout size={size}>
+          <SEO title="Home" />
+          <Box
+            fill="horizontal"
+            align={theme.main.align}
+            pad={{ top: 'xlarge' }}
+            height='medium'
+          >
+            <Heading>Hi, I'm Luke</Heading>
+            <Text size='large'>I am a failed founder, after-hours developer and day-time product manager.
+          In my free time I like to run, garden and watch sci-fi movies.</Text>
+          </Box>
+          <Box height="medium" width="large">
+            <Image
+              fit="cover"
+              src={salkantay}
+            />
+          </Box>
+          <BioSection />
+        </Layout>
+        )}
+      </ResponsiveContext.Consumer>
+    </Grommet>
+  )
+};
 
 export default IndexPage;

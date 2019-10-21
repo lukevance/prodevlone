@@ -1,51 +1,121 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
-import { Box, Heading, Menu } from "grommet";
-import { Menu as MenuIcon } from "grommet-icons";
+import React, { useState } from "react"
+import { 
+  Box, 
+  Button,
+  Heading, 
+  Layer,
+  ResponsiveContext
+ } from "grommet";
+import { Menu as MenuIcon, FormClose } from "grommet-icons";
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-    }}
-  >
-    <Box
-      direction="row"
-      justify='between'
-      fill
-      flex
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `0.75rem 1.0875rem 0 1.0875rem`,
-      }}
-    >
-      <Heading margin='none'>
-        <Link
-          to="/"
+const menuItems = [
+  {
+    "title": "Projects",
+    "link": "/my-work"
+  },
+  {
+    "title": "About",
+    "link": ""
+  },
+  {
+    "title": "Contact",
+    "link": ""
+  }
+];
+
+const Header = ({ siteTitle }) => {
+  const [showMenu, setShowMenu] = useState(false);
+  return (
+    <ResponsiveContext.Consumer>
+      {size => (
+        <header
           style={{
-            color: `white`,
-            textDecoration: `none`,
+            background: `rebeccapurple`,
           }}
         >
-            {siteTitle}
-        </Link>
-      </Heading>
-      <Menu
-        // disabled //TODO: add links and remove
-        label={<MenuIcon color="white" size="large"/>}
-        dropAlign={{right: 'right', top: 'bottom'}}
-        size="large"
-        items={[
-          { label: 'Projects', href: "/my-work" },
-          { label: 'Contact', onClick: () => {} },
-          { label: 'Resume', onClick: () => {} },
-        ]}
-      />
-    </Box>
-  </header>
-)
+          <Box
+            direction="row"
+            justify='between'
+            fill
+            flex
+            style={{
+              margin: `0 auto`,
+              // maxWidth: 960,
+              padding: `0.75rem 1.0875rem`,
+            }}
+          >
+            <Heading margin='none' alignSelf="center">
+              <Link
+                to="/"
+                style={{
+                  color: `white`,
+                  textDecoration: `none`,
+                }}
+              >
+                  {siteTitle}
+              </Link>
+            </Heading>
+            {(size !== "small") ? (
+              <Box direction="row">
+                {menuItems.map(item => 
+                  <Box>
+                    <Heading 
+                      alignSelf="center" 
+                      level="3" 
+                      margin="0.75rem 1.0875rem"
+                    >
+                      <Link
+                        to={item.link}
+                        style={{
+                          color: `white`,
+                          textDecoration: `none`,
+                        }}
+                      >
+                          {item.title}
+                      </Link>
+                    </Heading>
+                  </Box>
+                )}
+              </Box>
+            ) : 
+            <Button 
+              icon={<MenuIcon size="large" color="white"/>} 
+              onClick={() => setShowMenu(!showMenu)}
+              plain
+            />
+          }
+          </Box>
+          {size === "small" && showMenu ? 
+            <Layer>
+              <Box
+                background='light-2'
+                align='center'
+                justify='end'
+                direction='row'
+                tag='header'
+              >
+                <Button
+                  icon={<FormClose/>}
+                  onClick={() => setShowMenu(!showMenu)}
+                />
+              </Box>
+              <Box
+                fill
+                background='light-2'
+                align='center'
+                justify='center'
+              >
+                Sidebar
+              </Box>
+            </Layer> 
+          : null}
+        </header>
+        )}
+    </ResponsiveContext.Consumer>
+  );
+};
 
 Header.propTypes = {
   siteTitle: PropTypes.string,

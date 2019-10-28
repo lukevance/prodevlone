@@ -7,6 +7,7 @@ import {
   Image,
   ResponsiveContext 
 } from "grommet";
+import {Phone} from "grommet-icons";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -54,6 +55,20 @@ const IndexPage = () => {
             />
           </Box>
           <BioSection />
+          <Box pad={{top: "medium"}}>
+            <Heading>Contact</Heading>
+            <Box direction="row">
+              <Phone size="xlarge" />
+              <Box>
+                <Text size="xlarge">
+                  Text LukeBot +1 (720)-123-0987
+                </Text>
+                <Text>
+                  You can use LukeBot to pass a message along to me, schedule a coffee meeting, or even get free fantasy football advice! 
+                </Text>
+              </Box>
+            </Box>
+          </Box>
         </Layout>
         )}
       </ResponsiveContext.Consumer>

@@ -41,14 +41,18 @@ const IndexPage = () => {
           <Box
             fill="horizontal"
             align={theme.main.align}
-            pad={{ top: 'xlarge' }}
-            height='medium'
+            pad={{ top: 'xlarge', bottom: 'medium' }}
+            // height='medium'
           >
             <Heading>Hi, I'm Luke</Heading>
             <Text size='large'>I am a failed founder, after-hours developer and day-time product manager.
           In my free time I like to run, garden and watch sci-fi movies.</Text>
           </Box>
-          <Box height="medium" width="large">
+          <Box 
+            height="medium" 
+            // width="large"
+            fill="horizontal"
+          >
             <Image
               fit="cover"
               src={salkantay}
@@ -58,8 +62,8 @@ const IndexPage = () => {
           <Box pad={{top: "medium"}}>
             <Heading>Contact</Heading>
             <Box direction="row">
-              <Phone size="xlarge" />
-              <Box>
+              <Phone size="xlarge"/>
+              <Box pad={{left: "medium"}}>
                 <Text size="xlarge">
                   Text LukeBot +1 (720)-123-0987
                 </Text>

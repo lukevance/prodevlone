@@ -2,7 +2,7 @@
     {
         "title": "Adventure Texts",
         "image": "",
-        "description": "Pabst la croix cray letterpress readymade, whatever pork belly. Chambray green juice master cleanse, banh mi ennui fanny pack ugh fashion axe kale chips air plant palo santo small batch"
+        "description": "A framework for serving up choose your own adventure stories via text message. Stories can easily be created using the file template provided. After deploying through Twilio or a similar SMS service, Adventure Texts will send any willing adventurer on a text-based voyage. Players’ position in the game is persisted so the adventure continues at the desired pace of the player, and their decision tree can be retrieved at any point. Let the adventure begin!"
     },
     {
         "title": "Fantasy Football Statbook",

@@ -3,6 +3,7 @@ import {
     Box,
     Button,
     Collapsible,
+    Heading,
     Image,
     Text
 } from "grommet";
@@ -13,12 +14,17 @@ import hemera from "../images/hemera-logo.jpg";
 const BioSection = props => {
     const [open, setOpen] = useState(false);
     return (
-        <Box>
+        <Box pad={{top: "medium"}}>
+            <Heading>About</Heading>
+            <Text size="large">I'm a multi-cultural, interdisciplinary software creator. Currently I'm working on API integration tools for developers as a Product Manager for Cloud Elements.</Text>
+            <Text size="xlarge" margin={{top: "medium"}}>I love making things.</Text>
+            <Text size="xlarge">I believe most problems can be solved with imagination.</Text>
+            <Text size="xlarge">I build with pixels, but I start with pencils.</Text>
             <Button 
                 primary 
                 onClick={() => setOpen(!open)} 
                 label="Read the Long Version" 
-                margin={{horizontal: "xlarge"}}
+                margin={{horizontal: "xlarge", vertical: "medium"}}
             />
             <Collapsible open={open} {...props}>
                 <Box

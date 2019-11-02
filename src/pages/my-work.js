@@ -21,7 +21,7 @@ import projects from "../project-data.json";
 const WorkProjectsPage = () => (
     <ResponsiveContext.Consumer>
         {size => (
-            <Layout>
+            <Layout size={size}>
                 <SEO title="Made by Luke Vance" />
                 <Box
                     fill="horizontal"

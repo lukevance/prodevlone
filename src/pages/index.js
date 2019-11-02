@@ -1,6 +1,5 @@
 import React from "react";
-import { 
-  Anchor,
+import {
   Box, 
   Grommet,
   Heading, 
@@ -8,11 +7,11 @@ import {
   Image,
   ResponsiveContext 
 } from "grommet";
-import {Phone} from "grommet-icons";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import BioSection from "../components/bio-section";
+import ContactSection from "../components/contact-section";
 import salkantay from "../images/luke-salkantay.jpg";
 
 const theme = {
@@ -38,46 +37,30 @@ const IndexPage = () => {
       <ResponsiveContext.Consumer>
         {size => (
           <Layout size={size}>
-          <SEO title="Home" />
-          <Box
-            fill="horizontal"
-            align={theme.main.align}
-            pad={{ top: 'xlarge', bottom: 'medium' }}
-            // height='medium'
-          >
-            <Heading>Hi, I'm Luke</Heading>
-            <Text size='large'>I am a failed founder, after-hours developer and day-time product manager.
-          In my free time I like to run, garden and watch sci-fi movies.</Text>
-          </Box>
-          <Box 
-            height="medium" 
-            // width="large"
-            fill="horizontal"
-          >
-            <Image
-              fit="cover"
-              src={salkantay}
-            />
-          </Box>
-          <BioSection />
-          <Box pad={{top: "medium"}}>
-            <a name="contact" />
-            <Heading>
-              Contact
-            </Heading>
-            <Box direction="row">
-              <Phone size="xlarge"/>
-              <Box pad={{left: "medium"}}>
-                <Text size="xlarge">
-                  Text LukeBot +1 (720)-123-0987
-                </Text>
-                <Text>
-                  You can use LukeBot to pass a message along to me, schedule a coffee meeting, or even get free fantasy football advice! 
-                </Text>
-              </Box>
+            <SEO title="Home" />
+            <Box
+              fill="horizontal"
+              align={theme.main.align}
+              pad={{ top: 'xlarge', bottom: 'medium' }}
+              // height='medium'
+            >
+              <Heading>Hi, I'm Luke</Heading>
+              <Text size='large'>I am a failed founder, after-hours developer and day-time product manager.
+            In my free time I like to run, garden and watch sci-fi movies.</Text>
             </Box>
-          </Box>
-        </Layout>
+            <Box 
+              height="medium" 
+              // width="large"
+              fill="horizontal"
+            >
+              <Image
+                fit="cover"
+                src={salkantay}
+              />
+            </Box>
+            <BioSection />
+            <ContactSection />
+          </Layout>
         )}
       </ResponsiveContext.Consumer>
     </Grommet>

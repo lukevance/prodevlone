@@ -12,7 +12,7 @@ import { Menu as MenuIcon, FormClose } from "grommet-icons";
 
 const menuItems = [
   {
-    "title": "Projects",
+    "title": "Work",
     "link": "/my-work"
   },
   {
@@ -90,24 +90,42 @@ const Header = ({ siteTitle }) => {
           {size === "small" && showMenu ? 
             <Layer>
               <Box
-                background='light-2'
+                background='rebeccapurple'
                 align='center'
                 justify='end'
                 direction='row'
                 tag='header'
               >
                 <Button
-                  icon={<FormClose/>}
+                  icon={<FormClose color='white'/>}
                   onClick={() => setShowMenu(!showMenu)}
                 />
               </Box>
               <Box
                 fill
-                background='light-2'
-                align='center'
-                justify='center'
+                background='rebeccapurple'
+                align='end'
+                justify='end'
               >
-                Sidebar
+                {menuItems.map(item => (
+                  <Box>
+                    <Heading
+                      level="1" 
+                      margin="0.75rem 1.5rem"
+                    >
+                      <Link
+                        to={item.link}
+                        style={{
+                          color: `white`,
+                          textDecoration: `none`,
+                        }}
+                        onClick={() => setShowMenu(!showMenu)}
+                      >
+                          {item.title}
+                      </Link>
+                    </Heading>
+                  </Box>
+                ))}
               </Box>
             </Layer> 
           : null}

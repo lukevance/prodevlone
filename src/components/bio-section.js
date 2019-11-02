@@ -15,8 +15,7 @@ const BioSection = props => {
     const [open, setOpen] = useState(false);
     return (
         <Box pad={{top: "medium"}}>
-            <a name="about"/>
-            <Heading>About</Heading>
+            <Heading id="about">About Me</Heading>
             <Text size="large">I'm a multi-cultural, interdisciplinary software creator. Currently I'm working on API integration tools for developers as a Product Manager for Cloud Elements.</Text>
             <Text size="xlarge" margin={{top: "medium"}}>I love making things.</Text>
             <Text size="xlarge" margin={{top: "small"}}>I believe most problems can be solved with imagination.</Text>

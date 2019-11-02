@@ -1,5 +1,6 @@
 import React from "react";
 import { 
+  Anchor,
   Box, 
   Grommet,
   Heading, 
@@ -60,7 +61,10 @@ const IndexPage = () => {
           </Box>
           <BioSection />
           <Box pad={{top: "medium"}}>
-            <Heading>Contact</Heading>
+            <a name="contact" />
+            <Heading>
+              Contact
+            </Heading>
             <Box direction="row">
               <Phone size="xlarge"/>
               <Box pad={{left: "medium"}}>

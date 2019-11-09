@@ -8,7 +8,9 @@ import {
     Text
 } from "grommet";
 
+import uzbekistan from "../images/soviet-uzbek-logo.png";
 import ipod from "../images/ipod-mini.jpeg";
+import track from "../images/wheaton-track.jpg";
 import hemera from "../images/hemera-logo.jpg";
 
 const BioSection = props => {
@@ -34,31 +36,41 @@ const BioSection = props => {
                 >
                     <Box direction="row-responsive">
                         <Box pad="medium" width="large">
-                            <Text align="left">Lorem ipsum dolor amet art party cardigan pabst, neutra readymade blue bottle narwhal kogi DIY bitters bushwick aesthetic man braid. Everyday carry bicycle rights aesthetic kitsch, helvetica iceland biodiesel taxidermy. Selvage polaroid try-hard, synth activated charcoal bicycle rights vinyl viral chambray affogato vegan swag kale chips green juice ethical. Four loko cornhole narwhal echo park banh mi man braid XOXO microdosing selvage williamsburg tote bag vice master cleanse. Thundercats palo santo keytar tacos fixie, biodiesel humblebrag kitsch flannel cliche skateboard messenger bag.</Text>
+                            <Text align="left">It may have started when I was growing up in Tashkent, Uzbekistan, a post-Soviet city in Central Asia where the idea of buying a replacement was as dirty as the far off concept of capitalism. My role-model at 6 years old was a former train conductor  for the soviet train line who taught me how to take apart old radios, piece together wooden treasure chests with working hinges, and whittle wooden swords. It felt like with a few pieces of wood and scrapped parts I could make any toy a boy could imagine.</Text>
                         </Box>
                         <Box width="medium">
-                            <Image
-                                // fit="cover"
-                                src={ipod}
-                            />
+                            <Image src={uzbekistan} />
                         </Box>
                     </Box>
                     <Box direction="row-responsive">
                         <Box width="medium">
                             <Image
-                                // fit="contain"
+                                src={ipod}
+                            />
+                        </Box>
+                        <Box pad="medium" width="large">
+                            <Text align="left">Or maybe it started on Christmas day, the year I was 14. I’d been saving up for months to buy a shiny new blue iPod mini and could barely believe my eyes when I found one under the tree. I carried that perfectly weighted object in my pocket for years and almost every time I felt it’s curved edges in my palm I smiled with delight. From then on it was hard to imagine doing anything in life other than trying to make things that could bring people that kind of joy.</Text>
+                        </Box>
+                    </Box>
+                    <Box direction="row-responsive">
+                        <Box pad="medium" width="large">
+                            <Text>A few years later, I was a sophomore at a liberal arts college taking the last of my Physics and Math prerequisites and filling out transfer applications to engineering programs when I realized something. Along with learning more about how to build things, I wanted to know more about why things get made in the first place. One semester at a Design & Architecture school later, I was back to add Anthropology to my primarily Physics-based undergraduate degree.</Text>
+                        </Box>
+                        <Box width="medium">
+                            <Image src={track} />
+                        </Box>
+                    </Box>
+                    <Box direction="row-responsive">
+                        <Box width="medium">
+                            <Image
                                 src={hemera}
                             />
                         </Box>
                         <Box width="large">
-                            <Text>Cray bespoke fingerstache blog. Cold-pressed bitters poke, godard before they sold out messenger bag echo park farm-to-table ugh selvage thundercats direct trade. Chia portland pitchfork hella polaroid. You probably haven't heard of them cronut four loko twee gastropub, celiac godard fixie kitsch slow-carb tbh etsy jianbing humblebrag. Pabst la croix cray letterpress readymade, whatever pork belly. Chambray green juice master cleanse, banh mi ennui fanny pack ugh fashion axe kale chips air plant palo santo small batch wolf hell of.</Text>
+                            <Text>After working in manufacturing before quiting and attempting to launch a hardware startup, software finally drew me in full time. I couldn’t believe how a single person with a good idea could create so much and I was blown away by how quickly software allowed people to adapt to their observations. Although, I’ve learned there are still challenges that aren’t easily or quickly solved in this field, I’ve been happily building software since 2014.</Text>
                         </Box>
                     </Box>
-                    <Box direction="row-responsive">
-                        <Box width="large">
-                            <Text>Chia seitan ethical sartorial vexillologist blog. Air plant lomo vegan affogato tbh kale chips hexagon quinoa waistcoat flexitarian. Celiac taiyaki DIY sartorial, humblebrag actually portland photo booth lomo prism semiotics beard. Coloring book cray tattooed gluten-free polaroid. Kinfolk retro tote bag glossier. Intelligentsia neutra tumeric tofu vexillologist squid retro yr pop-up put a bird on it single-origin coffee cornhole yuccie jianbing.</Text>
-                        </Box>
-                    </Box>
+                    
                 </Box>
             </Collapsible>
         </Box>

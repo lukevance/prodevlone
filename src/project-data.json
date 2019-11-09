@@ -1,22 +1,22 @@
 [
     {
         "title": "Adventure Texts",
-        "image": "",
+        "image": "adventure",
         "description": "A framework for serving up choose your own adventure stories via text message. Stories can easily be created using the file template provided. After deploying through Twilio or a similar SMS service, Adventure Texts will send any willing adventurer on a text-based voyage. Players’ position in the game is persisted so the adventure continues at the desired pace of the player, and their decision tree can be retrieved at any point. Let the adventure begin!"
     },
     {
-        "title": "Fantasy Football Statbook",
-        "image": "",
-        "description": "Pabst la croix cray letterpress readymade, whatever pork belly. Chambray green juice master cleanse, banh mi ennui fanny pack ugh fashion axe kale chips air plant palo santo small batch"
+        "title": "Cloud Elements Conductor",
+        "image": "ce",
+        "description": "Visual, no-code API Integration workflow builder that makes creating complex data integrations simple. Although Cloud Elements primarily makes developer tools, this new product was designed to help less technical users engage with and configure complex integration solutions."
+    },
+    {
+        "title": "Grays Sports - Fantasy Football Statbook",
+        "image": "ffb",
+        "description": "Deploy a personalized league record and stat keeping website to put all the stats and historical records that you and your league care about in one place! Grays Sports is a simple app for data hungry fantasy leagues to customize and share their league data from season to season."
     },
     {
         "title": "Cloud Elements Sample App",
-        "image": "",
-        "description": "Pabst la croix cray letterpress readymade, whatever pork belly. Chambray green juice master cleanse, banh mi ennui fanny pack ugh fashion axe kale chips air plant palo santo small batch"
-    },
-    {
-        "title": "Cloud Elements Demo Center",
-        "image": "",
-        "description": "Pabst la croix cray letterpress readymade, whatever pork belly. Chambray green juice master cleanse, banh mi ennui fanny pack ugh fashion axe kale chips air plant palo santo small batch"
+        "image": "ce",
+        "description": "A no-frills frontend React App that contains sample code for connecting and retrieving data from cloud services using Cloud Elements’ APIs. A source of sample code intended as a tool for gaining familiarity with the Cloud Elements APIs in a user-facing example."
     }
 ]

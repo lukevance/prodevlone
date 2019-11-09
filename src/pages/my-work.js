@@ -15,8 +15,16 @@ import {
     Link
 } from 'grommet-icons';
 
-import placeholder from "../images/hemera-logo.jpg";
+import adventure from "../images/adventure.png";
+import ce from "../images/cloud-elements.png";
+import ffb from "../images/ffb.png";
 import projects from "../project-data.json";
+
+const images = {
+    ce: ce,
+    ffb: ffb,
+    adventure: adventure
+};
 
 const WorkProjectsPage = () => (
     <ResponsiveContext.Consumer>
@@ -29,17 +37,18 @@ const WorkProjectsPage = () => (
                 >
                     <Heading>Things I've Made</Heading>
                     <Text size="large">
-                        Lorem ipsum dolor amet art party cardigan pabst, neutra readymade blue bottle narwhal kogi DIY bitters bushwick aesthetic man braid. Everyday carry bicycle rights aesthetic kitsch, helvetica iceland biodiesel taxidermy.
-                    </Text>
+                       Did I mention I like to make things? Below are a few of the things I've worked on recently, both at work and as independant productions.
+                       </Text>
                 </Box>
                 {projects.map(project => 
                     <Box margin={{top: "medium"}}>
                         <Heading level="3">{project.title}</Heading>
                         <Box direction="row">
-                            <Box width="small" margin={{right: "medium"}}>
+                            <Box width="small" margin={{right: "medium"}} 
+                                    style={{minWidth:"100px"}}>
                                 <Image
                                     // fit="contain"
-                                    src={placeholder}
+                                    src={images[project.image]}
                                 />
                             </Box>
                             <Box>

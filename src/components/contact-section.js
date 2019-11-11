@@ -17,7 +17,7 @@ const Contact = () => {
                 <Phone size="xlarge"/>
                 <Box pad={{left: "medium"}}>
                     <Text size="xlarge">
-                    Text LukeBot +1 (720)-575-2537
+                        Text LukeBot at +1 (720)-575-2537
                     </Text>
                     <Text>
                     You can use LukeBot to pass a message along to me, schedule a coffee meeting, or even get free fantasy football advice! 

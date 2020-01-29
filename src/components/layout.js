@@ -10,6 +10,7 @@ import {
 
 import Header from "./header";
 import Sidebar from "./sidebar";
+import Footer from "./footer";
 import "./layout.css";
 
 class Layout extends Component {
@@ -67,6 +68,7 @@ class Layout extends Component {
                 {children}
               </Box>
             </Box>
+            <Footer />
           </div>
         )}
       />

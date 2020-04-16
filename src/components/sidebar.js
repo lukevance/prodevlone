@@ -19,7 +19,11 @@ import Emoji from 'a11y-react-emoji';
 
 import headshot from "../images/headshot.jpg";
 
-const socialIcons = [{ name: `Github`, icon: <Github size="large" /> }, { name: `LinkedIn`, icon: <Linkedin size="large" /> }, { name: `Mail`, icon: <Mail size="large" /> }, { name: `Medium`, icon: <Medium size="large" /> }];
+const socialIcons = [
+    { name: `Github`, icon: <Github size="large" /> }, 
+    { name: `LinkedIn`, icon: <Linkedin size="large" /> },
+    { name: `Medium`, icon: <Medium size="large" /> }
+];
 
 class Sidebar extends Component {
     render() {
@@ -57,8 +61,8 @@ class Sidebar extends Component {
                                         src={headshot}
                                     />
                                 </Box>
-                                <Text size="large">That's me <Emoji symbol="☝️"/></Text>
-                                <Text size="large" margin={{top: 'medium'}}>Find more stuff about me <Emoji symbol="👇"/></Text>
+                                <Text size="large">That's me <Emoji symbol="☝️" /></Text>
+                                <Text size="large" margin={{ top: 'medium' }}>Find more stuff about me <Emoji symbol="👇" /></Text>
                                 <Box direction='row' margin={{ top: 'medium' }} wrap='true'>
                                     {data.site.siteMetadata.contentLinks.map(social => <Button icon={socialIcons.find(icn => social.name === icn.name).icon} onClick={() => window.open(social.link, '_blank')} />)}
                                 </Box>

@@ -15,10 +15,6 @@ module.exports = {
       {
         name: `Medium`,
         link: `https://medium.com/@lukevance`
-      },
-      {
-        name: `Mail`,
-        link: `mailto:lukealanv@gmail.com`
       }
     ]
   },

@@ -12,7 +12,6 @@ import {
     // CaretPrevious,
     Github,
     Linkedin,
-    Mail,
     Medium,
 } from 'grommet-icons';
 import Emoji from 'a11y-react-emoji';

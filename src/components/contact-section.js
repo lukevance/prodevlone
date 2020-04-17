@@ -20,7 +20,7 @@ const Contact = () => {
                         Hit me up on Denver Devs!
                     </Text>
                     <Text>
-                        The Denver Devs community is awesome, and they have a great Slack group. If you're not already on it, you can sign up here: {<a href="https://denverdevs.org" target="_blank">denverdevs.org</a>}
+                        The Denver Devs community is awesome, and they have a great Slack group. If you're not already on it, you can sign up here: {<a href="https://denverdevs.org" target="_blank" rel="noopener noreferrer">denverdevs.org</a>}
                     </Text>
                 </Box>
             </Box>

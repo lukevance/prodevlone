@@ -41,8 +41,8 @@ class Layout extends Component {
               <Sidebar
                 size={size} 
                 showSideBar={showSideBar}
-                // toggleSidebar={this.toggleSidebar}
-                />
+                toggleSidebar={this.toggleSidebar}
+              />
                 <Button
                   margin={{ top: "medium" }}
                   onClick={() => this.toggleSidebar()}

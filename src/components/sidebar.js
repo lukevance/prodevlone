@@ -3,13 +3,12 @@ import { StaticQuery, graphql } from 'gatsby';
 import {
     Box,
     Button,
-    Collapsible,
     Image,
+    Layer,
     Text,
 } from 'grommet';
 import {
-    // CaretNext,
-    // CaretPrevious,
+    CaretPrevious,
     Github,
     Linkedin,
     Medium,
@@ -26,7 +25,7 @@ const socialIcons = [
 
 class Sidebar extends Component {
     render() {
-        const { showSideBar, size } = this.props;
+        const { showSideBar, toggleSidebar } = this.props;
         return (
             <StaticQuery
                 query={graphql`
@@ -46,27 +45,40 @@ class Sidebar extends Component {
                         direction='row'
                         style={{ minHeight: '600px' }}
                     >
-                        <Collapsible direction="horizontal" open={showSideBar}>
-                            <Box
-                                flex
-                                width={(size !== "small" ? "medium" : "small")}
-                                background="light-2"
+                        {showSideBar && 
+                        <Layer
+                            onEsc={() => toggleSidebar()}
+                            onClickOutside={() => toggleSidebar()}
+                            full="vertical"
+                            position="left"
+                        >
+                            <Box 
+                                direction="row"
                                 pad="small"
-                                elevation="small"
                             >
-                                <Box height="small" width="small">
-                                    <Image
-                                        fit="cover"
-                                        src={headshot}
-                                    />
+                                <Box>
+                                    <Box height="small" width="small">
+                                        <Image
+                                            fit="cover"
+                                            src={headshot}
+                                        />
+                                    </Box>
+                                    <Text size="large">That's me <Emoji symbol="☝️" /></Text>
+                                    <Text size="large" margin={{ top: 'medium' }}>Find more stuff about me <Emoji symbol="👇" /></Text>
+                                    <Box direction='row' margin={{ top: 'medium' }} wrap='true'>
+                                        {data.site.siteMetadata.contentLinks.map(social => <Button icon={socialIcons.find(icn => social.name === icn.name).icon} onClick={() => window.open(social.link, '_blank')} />)}
+                                    </Box>
                                 </Box>
-                                <Text size="large">That's me <Emoji symbol="☝️" /></Text>
-                                <Text size="large" margin={{ top: 'medium' }}>Find more stuff about me <Emoji symbol="👇" /></Text>
-                                <Box direction='row' margin={{ top: 'medium' }} wrap='true'>
-                                    {data.site.siteMetadata.contentLinks.map(social => <Button icon={socialIcons.find(icn => social.name === icn.name).icon} onClick={() => window.open(social.link, '_blank')} />)}
-                                </Box>
+                                <Button
+                                    margin={{ top: "medium" }}
+                                    onClick={() => toggleSidebar()}
+                                    plain={true}
+                                    focusIndicator={false}
+                                    alignSelf="start"
+                                    icon={<CaretPrevious size='large' />}
+                                />
                             </Box>
-                        </Collapsible>
+                        </Layer>}
                     </Box>
                 )}
             />

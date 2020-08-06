@@ -12,10 +12,6 @@ import { Menu as MenuIcon, FormClose } from "grommet-icons";
 
 const menuItems = [
   {
-    "title": "Work",
-    "link": "/my-work"
-  },
-  {
     "title": "About",
     "link": "#about"
   },
@@ -42,7 +38,6 @@ const Header = ({ siteTitle }) => {
             flex
             style={{
               margin: `0 auto`,
-              // maxWidth: 960,
               padding: `0.75rem 1.0875rem`,
             }}
           >
